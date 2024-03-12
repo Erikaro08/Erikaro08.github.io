@@ -1,0 +1,316 @@
+*{
+box-sizing: border-box;
+margin: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+    font-family: sans-serif;
+}
+
+h1{ font-size: 3.5em;}
+h2{ font-size: 2.7em;}
+h3{ font-size: 2em;}
+p{ font-size: 1.25em;}
+ul{ list-style: none;}
+li{ font-size: 0.9em;}
+
+button{
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 0.9px 30px;
+    border-radius: 30px;
+    border: 2px solid rgba(0,0,0,0.3);
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    color: white;
+    background-color: rgb(46, 119, 141);
+}
+
+button:hover{
+    background-color: rgba(94, 104, 245, 0.675);
+}
+
+.container{
+    max-width: 1400px;
+    margin: auto;
+}
+
+/* inicio de header */
+header{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(245, 245, 245);
+    padding: 10px;
+}
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+.logo img{
+    width: 240px;
+    padding: 10px 10px;
+}
+
+.nav{
+    display: flex;
+    flex-direction: row;
+    margin-top: 2%;
+}
+
+.nav a{
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    padding: 15px;
+}
+
+.nav a:hover{
+    color: rgb(32, 71, 71);
+}
+
+.nav ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+}
+/* fin header */
+
+/* inicio home */
+#home{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(204, 198, 198);
+}
+
+#home .container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#home .container img{
+    height: 350px;
+}
+/* fin home */
+
+/* inicio About us */
+#about{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 90vh;
+    color: white;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url(./imagenes_pagina/About_us/about_3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+/* fin About us*/
+
+/* inicio Contact Us */
+#contact{
+    min-height: 50vh;
+    background-color: rgb(245, 245, 245);
+    padding: 50px;
+    text-align: center;
+}
+
+#contact .container{
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#contact .container h2{
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+#contact .contact-wrapper{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+}
+
+#contact .contact-form{
+    text-align: left;
+}
+
+#contact .contact-form h3{
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#contact .form-group{
+    margin-bottom: 20px;
+}
+
+input, textarea{
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    color: #333;
+}
+
+input:focus,
+textarea:focus{
+    outline: none;
+    box-shadow: 0 0 8px #bbb;
+}
+
+#contact button{
+    display: inline-block;
+    padding: 12px 24px;
+    color: #fff;
+    border: none;
+}
+
+#contact .contact-info{
+    text-align: left;
+}
+#contact .contact-info h3{
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+#contact .contact-info p{
+    margin-bottom: 10px;
+    color: #555;
+    font-size: 17px;
+}
+
+#contact .contact-info i{
+    color: rgb(46, 119, 141);
+    margin-right: 10px;
+}
+/* fin Contact Us */
+
+/* Inicio nuevo footer */
+footer{
+    background-color: rgb(204, 198, 198);
+    height: auto;
+    width: 100vw;
+    padding-top: 40px;
+
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+}
+
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+
+.socials{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem 0
+}
+
+.socials li{
+    margin: 0 10px;
+}
+
+.socials a{
+    color: black;
+}
+
+.socials a i{
+    font-size: 1.5rem;
+}
+
+.socials a:hover i{
+    color: rgba(94, 104, 245, 0.675);
+}
+
+.footer-bottom{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+    background-color: rgb(179, 174, 174);
+}
+
+
+.footer-bottom span{
+    text-transform: uppercase;
+    opacity: .4;
+    font-weight: 200;
+}
+/* Fin nuevo footer */
+
+
+
+
+
+@media (min-width: 720px){
+
+    header{
+   
+        flex-direction: row;
+        justify-content: space-evenly;
+
+    }
+    .nav{
+        flex-direction: row;
+        padding-bottom: 0;
+        padding-right: 20px;
+    }
+
+    #home{
+        justify-content: center;
+    }
+
+    #home .container{
+        background-image: url(./imagenes_pagina/Home/sofa_prin1.png);
+        background-repeat: no-repeat;
+        background-position: right center;
+        background-size: 500px;
+        min-height: 60vh;
+        background-position: calc(80vw - 500px);
+
+    }
+    #home .container .texto{
+        padding: 0px 35px;
+        text-align: initial;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+
+@media screen and(max-width: 768px) {
+    #contact .container{
+        padding: 20px;
+    }
+    #contact .contact-wrapper{
+        grid-template-columns: 1fr;
+    }
+}
